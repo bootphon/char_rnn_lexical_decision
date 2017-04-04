@@ -1,0 +1,16 @@
+import orthographic_english
+import orthographic_dutch
+import orthographic_french
+import phonetic_french
+import orthographic_german
+import orthographic_serbian_latin
+import orthographic_serbian_cyrillic
+import orthographic_spanish
+import orthographic_basque
+import orthographic_vietnamese
+import phonetic_italian
+import phonetic_english
+import phonetic_english2
+# import mixed_french
+# import mixed_dutch
+import test
