@@ -1,5 +1,7 @@
 # Installation
 
+## Basic installation
+
 You will need to install the dependencies of torch-rnn from jcjohnson, including 
 torch and python 2.7. You don't need to actually install torch-rnn, a slightly 
 modified version is already in networks/. You will find every detail on the 
@@ -10,6 +12,16 @@ https://github.com/jcjohnson/torch-rnn/
 Once these requirements are met you should be able to run everything. Slightly 
 modified versions of torch-rnn and Wuggy (http://crr.ugent.be/programs-data/wuggy) 
 are already provided.
+
+**This installation does not provide the corpus we used for our experiments.**
+
+## Downloading complete data
+
+This corpus has been crafted from the BookCorpus dataset (http://yknzhu.wixsite.com/mbweb).
+In accordance with their policy, our corpus should only be used for scientific or research 
+purposes in academic affiliations.
+For accessing our complete data (corpus, trained networks, results...), please send me an email
+with your name and affiliation at gael.le-godais at orange.fr 
 
 # Corpus preprocessing
 
