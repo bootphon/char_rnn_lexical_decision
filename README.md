@@ -99,13 +99,8 @@ models and their lexical capacity over the given stimulus.
 
 # Miscellaneous
 
-There are a few things left from previous experiments in analysis/ and 
-networks/eval/ . Those used different measures and are not functional anymore. 
-
 probs/ might be a bit weird at first because it is redundant with tables/ but 
 with less information. That's because the generation of a result table is done 
 in two steps. First the network is evaluated on a list of words/nonwords and the 
 resulting lexicality indicators are stored in probs/ folder. Then the second 
-step is done with python and adds some statistics to this table. Due to the lack 
-of reliable interface between python and lua, there is no other simple way.
-
+step is done with python and adds some statistics to this table. 
