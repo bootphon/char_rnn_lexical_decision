@@ -1,6 +1,5 @@
-================================================================================
-Installation
-================================================================================
+# Installation
+
 You will need to install the dependencies of torch-rnn from jcjohnson, including 
 torch and python 2.7. You don't need to actually install torch-rnn, a slightly 
 modified version is already in networks/. You will find every detail on the 
@@ -12,9 +11,8 @@ Once these requirements are met you should be able to run everything. Slightly
 modified versions of torch-rnn and Wuggy (http://crr.ugent.be/programs-data/wuggy) 
 are already provided.
 
-================================================================================
-Corpus preprocessing
-================================================================================
+# Corpus preprocessing
+
 The non processed corpus should be in corpus/
 The preprocessing has two steps:
         - A general preprocessing step that cleans the corpus, splits it and 
@@ -38,9 +36,8 @@ python networks/scripts/preprocess.py --input_txt data/my_data.txt \
         --output_h5 networks/data/my_data.h5 \
         --output_json networks/data/my_data.json
 
-================================================================================
-Nonword generation with Wuggy
-================================================================================
+# Nonword generation with Wuggy
+
 We use Wuggy to generate a list of nonwords, where every nonword is a match of 
 an actual word. Even though Wuggy is usually used with the GUI, we have to use 
 a script here. Some examples of the use of wuggy without GUI can be found in 
@@ -56,9 +53,8 @@ matching segment length, total length and transition frequencies in output.
 The output as well as the input should be in data/. There are already examples 
 called stimuli*.txt in data/
 
-================================================================================
-Training of a neural network and evaluation on the spot-the-word task
-================================================================================
+# Training of a neural network and evaluation on the spot-the-word task
+
 This script is a wrapper of the following scripts:
         networks/train.lua
         networks/evaluation.lua
@@ -77,24 +73,21 @@ python run_network.py -model_type               lstm or rnn
                       -stimuli                  list of words and their matching nonword (usually in data/)
                       [-no_training]            this option evaluates the network skipping the training (the network should already be trained)
 
-================================================================================
-Running a full experiment
-================================================================================
+# Running a full experiment
+
 Some shell scripts are provided to run experiments on the cluster using qsub or 
 directly on the host machine such as exp500k.sh or gen_500k.sh
 
-================================================================================
-Add baselines to an experiment
-================================================================================
+# Add baselines to an experiment
+
 Once a full experiment has been run it is possible to add token based unigram 
 and bigram language model.
 
 python baselines.py -stimuli data/nonword_list.txt -h5_corpus networks/data/corpus.h5 \
                     -json_corpus networks/data/corpus.json -dump_folder tables/experiment_name/
 
-================================================================================
-Experiment analysis
-================================================================================
+# Experiment analysis
+
 An analysis of lexical capacity is provided:
 
 python lex_capacity.py -tables_dir tables/experiment_name/ \
@@ -104,9 +97,8 @@ python lex_capacity.py -tables_dir tables/experiment_name/ \
 The output is a tidy data table summing up the parameters of the experiment 
 models and their lexical capacity over the given stimulus.
 
-================================================================================
-Miscellaneous
-================================================================================
+# Miscellaneous
+
 There are a few things left from previous experiments in analysis/ and 
 networks/eval/ . Those used different measures and are not functional anymore. 
 
