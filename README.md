@@ -68,7 +68,7 @@ data, there are already examples called `data/stimuli*.txt`.
 
 # Training of a neural network and evaluation on the spot-the-word task
 
-This script is a wrapper of the following scripts:
+`run_network.py` is a wrapper of the following scripts:
 
         networks/train.lua
         networks/evaluation.lua
